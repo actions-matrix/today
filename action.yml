@@ -1,0 +1,17 @@
+name: "today"
+description: "A small utility to get today date as action outputs"
+branding:
+  icon: "tag"
+  color: "white"
+outputs:
+  date:
+    description: "The today date in YYYY-MM-DD format"
+  year:
+    description: "The today's year"
+  month:
+    description: "The today's month"
+  day:
+    description: "The today's day"
+runs:
+  using: "node16"
+  main: "index.js"
