@@ -1,7 +1,11 @@
 #!/usr/bin/env node
+const fs = require('fs');
+const process = require('process');
 
-const log = (...args) => console.log(...args)
-const set_output = (name, value) => log(`::set-output name=${name}::${value}`)
+const set_output = (name, value) => {
+    fs.appendFileSync(process.env.GITHUB_OUTPUT, `${name}=${value}}`);
+    console.log("Set output: " + name + "=" + value);
+}
 
 const today = new Date()
 
@@ -11,8 +15,6 @@ const output = {
     month: today.getMonth() + 1,
     day: today.getDate(),
 }
-
-log(`Today is ${output.date}`)
 
 set_output('date', `${output.date}`)
 set_output('year', output.year)
