@@ -1,4 +1,4 @@
-name: Build
+name: unit-test
 
 on:
   push:
