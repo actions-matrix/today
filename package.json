@@ -1,0 +1,17 @@
+{
+  "name": "today",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:actions-matrix/today.git",
+  "author": "Socheat Sok <socheatsok78@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "ncc build index.js -o dist --source-map --license licenses.txt"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.36.1"
+  }
+}
