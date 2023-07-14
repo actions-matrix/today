@@ -2835,6 +2835,11 @@ var __webpack_exports__ = {};
 (() => {
 const core = __nccwpck_require__(186);
 
+const setOutput = (name, value) => {
+    core.setOutput(name, value)
+    core.info(`Set output ${name}=${value}`)
+}
+
 async function run() {
     const today = new Date()
 
@@ -2845,10 +2850,10 @@ async function run() {
         day: today.getDate(),
     }
 
-    core.setOutput('date', `${output.date}`)
-    core.setOutput('year', output.year)
-    core.setOutput('month', output.month)
-    core.setOutput('day', output.day)
+    setOutput('date', `${output.date}`)
+    setOutput('year', output.year)
+    setOutput('month', output.month)
+    setOutput('day', output.day)
 }
 
 run()
