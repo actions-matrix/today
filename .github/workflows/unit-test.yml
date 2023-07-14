@@ -15,7 +15,7 @@ jobs:
         uses: actions-matrix/release-matrix-action@v1
         with:
           search: "nginx"
-          date: "${{ steps.today.outputs.year }}"
+          date: ${{ steps.today.outputs.year }}
     outputs:
       matrix: ${{ steps.release.outputs.matrix }}
 
